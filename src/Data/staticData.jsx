@@ -373,25 +373,25 @@ export const otherSectionsMenuItems = [
 export const mySocialMedia = [
   {
     name: "Facebook",
-    link: "https://www.facebook.com/MoamalAlaa109",
+    link: "https://x.com/Pulkit0804",
     icon: "facebook",
     id: 1,
   },
   {
     name: "Twitter",
-    link: "https://twitter.com/MoamalAlaa7",
+    link: "https://x.com/Pulkit0804",
     icon: "twitter",
     id: 2,
   },
   {
     name: "Instagram",
-    link: "https://www.instagram.com/kubislav23/",
+    link: "https://x.com/Pulkit0804",
     icon: "instagram",
     id: 3,
   },
   {
     name: "Linkedin",
-    link: "https://www.linkedin.com/in/moamal-alaa-a4bb15237/",
+    link: "https://x.com/Pulkit0804",
     icon: "linkedin",
     id: 4,
   },

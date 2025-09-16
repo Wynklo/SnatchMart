@@ -4,7 +4,6 @@ import { CONTACT_EMAILS, WEBSITE_NAME } from "src/Data/constants";
 import CopyRightsText from "./CopyRightsText/CopyRightsText";
 import CustomEmailInput from "./CustomEmailInput/CustomEmailInput";
 import s from "./Footer.module.scss";
-import RepoStarsForks from "./RepoStarsForks/RepoStarsForks";
 import DownloadAppInfo from "./WebsiteSocialMedia/DownloadAppInfo";
 
 const Footer = () => {
@@ -38,7 +37,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+88015-88888-9999">+88015-88888-9999</a>
+                <a href="tel:+91849-1041-426">+91 8491041426</a>
               </li>
             </ul>
           </section>
@@ -92,7 +91,6 @@ const Footer = () => {
         <CopyRightsText />
       </div>
 
-      <RepoStarsForks />
     </footer>
   );
 };
