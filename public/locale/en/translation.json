@@ -271,7 +271,7 @@
     "seeAll": "See All",
     "returnToShop": "Return To Shop",
     "updateCart": "Update Cart",
-    "applyCoupon": "Applay Coupon",
+    "applyCoupon": "Apply Coupon",
     "processToCheckout": "Process To Checkout",
     "placeOrder": "Place Order",
     "backToHome": "Back to home page",
@@ -431,7 +431,7 @@
   "loginSignUpPage": {
     "createAccount": "Create an account",
     "enterDetails": "Enter your details below",
-    "login": "Log in to E-commercew",
+    "login": "Log in",
     "forgotPassword": "Forgot password?",
     "alreadyHaveAcc": "Already have an account?",
     "dontHaveAcc": "don't you have an account? "
