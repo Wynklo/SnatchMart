@@ -13,8 +13,9 @@ const UserMenuIcon = ({ visibility }) => {
   const userContainerRef = useRef();
   const activeClass = isMenuUserActive ? s.active : "";
 
-  useEventListener(document, "click", (event) => {
-    const isUserIconClicked = userContainerRef?.current.contains(event.target);
+ useEventListener(document, "click", (event) => {
+    if (!userContainerRef.current) return;
+    const isUserIconClicked = userContainerRef.current.contains(event.target);
     if (isUserIconClicked) return;
 
     toggleMenuUserActive(false);
