@@ -1,0 +1,43 @@
+.hood-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+}
+
+.hood-item {
+  display: grid;
+  align-content: start;
+  gap: 0.6rem;
+  padding: 2.5rem clamp(1.25rem, 3vw, 2.5rem) 0 0;
+}
+
+.hood-item + .hood-item {
+  padding-left: clamp(1.25rem, 3vw, 2.5rem);
+  border-left: 1px solid var(--line);
+}
+
+.hood-stat {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+}
+
+.hood-item p {
+  max-width: 24rem;
+  color: var(--fg-muted);
+}
+
+@media (max-width: 860px) {
+  .hood-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hood-item,
+  .hood-item + .hood-item {
+    padding: 2rem 0;
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}

@@ -1,0 +1,375 @@
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "feed feed history"
+    "budget alerts history"
+    "coupons help more";
+  gap: 1rem;
+}
+
+.bento-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: clamp(1.5rem, 2.4vw, 2rem);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line-soft);
+  overflow: hidden;
+}
+
+.bento-card--feed { grid-area: feed; }
+.bento-card--history { grid-area: history; }
+.bento-card--budget { grid-area: budget; }
+.bento-card--alerts { grid-area: alerts; }
+.bento-card--coupons { grid-area: coupons; }
+.bento-card--help { grid-area: help; }
+.bento-card--more { grid-area: more; }
+
+.bento-copy {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 28rem;
+}
+
+.bento-copy p {
+  color: var(--fg-muted);
+}
+
+.bento-eyebrow {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.bento-visual {
+  margin-top: auto;
+}
+
+.bento-card--more {
+  justify-content: space-between;
+  background: var(--yellow);
+  box-shadow: none;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.bento-card--more .bento-eyebrow {
+  color: var(--yellow-ink);
+}
+
+.bento-card--more .h3 {
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  letter-spacing: -0.035em;
+  max-width: 14ch;
+}
+
+.bento-more-arrow {
+  align-self: flex-end;
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--yellow);
+  transition: transform 0.5s var(--ease-out);
+}
+
+.bento-card--more:hover .bento-more-arrow {
+  transform: rotate(45deg);
+}
+
+/* Feed */
+.fv-feed {
+  display: flex;
+  gap: 0.75rem;
+  margin-right: -3rem;
+}
+
+.fv-deal {
+  flex: 0 0 9.5rem;
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.55rem;
+  border-radius: 16px;
+  background: var(--cream);
+  font-size: 0.85rem;
+}
+
+.fv-deal b {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0.35rem;
+}
+
+.fv-deal-img {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 6.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.fv-deal-img img {
+  width: 82%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.fv-deal:hover .fv-deal-img img {
+  transform: scale(1.06);
+}
+
+.fv-off {
+  position: absolute;
+  z-index: 1;
+  top: 0.45rem;
+  left: 0.45rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--yellow);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* History */
+.fv-history {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: var(--cream);
+}
+
+.fv-history-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.fv-history-head small,
+.fv-history-note small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.fv-history-head b {
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.fv-pill {
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.fv-pill--green {
+  background: #e4f3e9;
+  color: #146c3a;
+}
+
+.fv-history-chart {
+  width: 100%;
+  height: 170px;
+  overflow: visible;
+}
+
+.fv-grid {
+  stroke: var(--line);
+  stroke-dasharray: 3 4;
+}
+
+.fv-history-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.fv-history-note {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.fv-history-note s {
+  color: var(--red);
+}
+
+/* Budget */
+.fv-budget {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.fv-budget-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fv-budget-row span {
+  color: var(--muted);
+}
+
+.fv-bar {
+  height: 10px;
+  margin-bottom: 0.5rem;
+  border-radius: var(--radius-pill);
+  background: var(--cream-deep);
+  overflow: hidden;
+}
+
+.fv-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--yellow);
+}
+
+.fv-bar--blue span {
+  background: var(--blue);
+}
+
+/* Alerts */
+.fv-alerts {
+  position: relative;
+  height: 6.5rem;
+}
+
+.fv-alert {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line-soft), var(--shadow-soft);
+  font-size: 0.85rem;
+}
+
+.fv-alert b {
+  margin-right: 0.25rem;
+}
+
+.fv-alert--back {
+  top: 3.6rem;
+  z-index: 0;
+  transform: scale(0.94);
+  opacity: 0.75;
+}
+
+.fv-alert-dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(31, 157, 85, 0.15);
+}
+
+.fv-alert-dot--blue {
+  background: var(--blue);
+  box-shadow: 0 0 0 4px rgba(40, 116, 240, 0.15);
+}
+
+/* Coupons */
+.fv-coupon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: var(--yellow-soft);
+  border: 1.5px dashed rgba(122, 96, 0, 0.45);
+}
+
+.fv-coupon small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--yellow-ink);
+}
+
+.fv-coupon b {
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+}
+
+.fv-coupon-copy {
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Help */
+.fv-chat {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.fv-bubble {
+  max-width: 85%;
+  padding: 0.6rem 0.85rem;
+  border-radius: 16px 16px 16px 4px;
+  background: var(--cream);
+}
+
+.fv-bubble--me {
+  justify-self: end;
+  border-radius: 16px 16px 4px 16px;
+  background: var(--blue);
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "feed feed"
+      "history budget"
+      "history alerts"
+      "coupons help"
+      "more more";
+  }
+}
+
+@media (max-width: 640px) {
+  .bento {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "feed"
+      "history"
+      "budget"
+      "alerts"
+      "coupons"
+      "help"
+      "more";
+  }
+
+  .bento-card--more {
+    min-height: 200px;
+  }
+}

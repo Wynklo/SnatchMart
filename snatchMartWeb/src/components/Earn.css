@@ -1,0 +1,247 @@
+.earn {
+  border-radius: var(--radius-xl);
+  margin-inline: clamp(0.5rem, 1.5vw, 1.25rem);
+  overflow: hidden;
+}
+
+.earn-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.earn-copy {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.earn-accent {
+  color: var(--yellow);
+}
+
+.earn-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 2rem;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.earn-points dt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.earn-points dt svg {
+  color: var(--yellow);
+}
+
+.earn-points dd {
+  margin: 0.25rem 0 0 1.5rem;
+  font-size: var(--fs-small);
+  color: var(--fg-muted);
+}
+
+/* Demo card */
+.link-demo {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.6);
+}
+
+.link-demo-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.link-demo-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cream-deep);
+}
+
+.link-demo-bar small {
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.link-field {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.4rem;
+}
+
+.link-field small,
+.link-result-head small {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.link-input {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  background: var(--cream);
+  color: var(--muted);
+}
+
+.link-url {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.link-convert {
+  display: grid;
+  place-items: center;
+  height: 3rem;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--cream);
+  font-weight: 600;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.link-convert.is-active {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.link-result {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: var(--blue-soft);
+}
+
+.link-result-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-rate {
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: var(--paper);
+  color: var(--blue-ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.link-output {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.6rem 0.6rem 1rem;
+  border-radius: 14px;
+  background: var(--paper);
+}
+
+.link-output b {
+  font-size: 1.05rem;
+  color: var(--blue-ink);
+  letter-spacing: -0.01em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.link-copy {
+  flex: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.link-share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.link-share span {
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.link-earned {
+  position: absolute;
+  right: -1.5rem;
+  bottom: -1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 1.1rem 0.75rem 0.75rem;
+  border-radius: 18px;
+  background: var(--yellow);
+  color: var(--ink);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+}
+
+.link-earned small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--yellow-ink);
+}
+
+.link-earned-icon {
+  display: grid;
+  place-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .earn-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .earn-visual {
+    max-width: 34rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .earn-points {
+    grid-template-columns: 1fr;
+  }
+
+  .link-earned {
+    right: 0.5rem;
+  }
+}

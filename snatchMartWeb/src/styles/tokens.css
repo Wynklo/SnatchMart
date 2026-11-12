@@ -1,0 +1,59 @@
+:root {
+  /* Palette */
+  --cream: #f3f1e7;
+  --cream-deep: #ebe8dc;
+  --paper: #ffffff;
+  --ink: #1a1a1a;
+  --ink-soft: #2a2a28;
+  --muted: #6b6960;
+  --line: rgba(26, 26, 26, 0.12);
+  --line-soft: rgba(26, 26, 26, 0.07);
+
+  --yellow: #ffd60a;
+  --yellow-soft: #fff4b8;
+  --yellow-ink: #7a6000;
+  --blue: #2874f0;
+  --blue-soft: #dbe7ff;
+  --blue-ink: #0b3d91;
+  --green: #1f9d55;
+  --red: #d64545;
+
+  /* Semantic */
+  --bg: var(--cream);
+  --surface: var(--paper);
+  --fg: var(--ink);
+  --fg-muted: var(--muted);
+  --border: var(--line);
+
+  /* Type */
+  --font-sans: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+
+  --fs-display: clamp(2.9rem, 7.4vw, 7.2rem);
+  --fs-h2: clamp(2.2rem, 4.8vw, 4.4rem);
+  --fs-h3: clamp(1.25rem, 1.8vw, 1.6rem);
+  --fs-lead: clamp(1.05rem, 1.35vw, 1.3rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-label: 0.8125rem;
+
+  /* Layout */
+  --container-max: 1440px;
+  --gutter: clamp(1.25rem, 4.5vw, 5rem);
+  --section-y: clamp(5rem, 11vw, 10rem);
+  --header-height: 76px;
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 1px 2px rgba(26, 26, 26, 0.04), 0 8px 24px rgba(26, 26, 26, 0.06);
+  --shadow-lift: 0 2px 4px rgba(26, 26, 26, 0.05), 0 24px 60px rgba(26, 26, 26, 0.12);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+}

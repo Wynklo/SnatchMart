@@ -1,0 +1,13 @@
+{
+  "name": "SnatchMart",
+  "short_name": "SnatchMart",
+  "description": "SnatchMart watches prices across Flipkart, Amazon and more, alerts you on real drops, keeps you on budget and pays you for sharing deals.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#F3F1E7",
+  "background_color": "#F3F1E7",
+  "icons": [
+    { "src": "/brand/mark.png", "sizes": "256x256", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
