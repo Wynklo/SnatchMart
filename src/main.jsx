@@ -1,18 +1,12 @@
 import { StrictMode } from "react";
-import ReactDOM from "react-dom/client";
-import { HelmetProvider } from "react-helmet-async";
-import { Provider } from "react-redux";
+import { createRoot } from "react-dom/client";
+import "lenis/dist/lenis.css";
+import "./styles/tokens.css";
+import "./styles/base.css";
 import App from "./App.jsx";
-import { store } from "./App/store.jsx";
-import "./Styles/main.scss";
-import "./i18n.js";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Provider store={store}>
-      <HelmetProvider>
-        <App />
-      </HelmetProvider>
-    </Provider>
+    <App />
   </StrictMode>
 );

@@ -1,0 +1,39 @@
+.idea {
+  background: var(--paper);
+  border-radius: var(--radius-xl);
+  margin-inline: clamp(0.5rem, 1.5vw, 1.25rem);
+}
+
+.idea-inner {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.idea-statement {
+  max-width: 18ch;
+  font-size: clamp(2.4rem, 6vw, 5.6rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.idea-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.idea-statement .idea-accent:nth-child(2) {
+  color: var(--blue);
+}
+
+.idea-statement .idea-accent:nth-child(4) {
+  background: linear-gradient(transparent 62%, var(--yellow) 62%, var(--yellow) 92%, transparent 92%);
+}
+
+.idea-body {
+  margin-inline: auto;
+}

@@ -1,0 +1,73 @@
+.cta {
+  padding-block: clamp(3rem, 6vw, 5rem) var(--section-y);
+}
+
+.cta-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 2.5rem;
+  align-items: end;
+  padding: clamp(2rem, 6vw, 5rem);
+  border-radius: var(--radius-xl);
+  background: var(--yellow);
+  overflow: hidden;
+}
+
+.cta-copy {
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.cta-copy .serif {
+  color: var(--blue-ink);
+}
+
+.cta-lead {
+  max-width: 30rem;
+  font-size: var(--fs-lead);
+  color: rgba(26, 26, 26, 0.75);
+}
+
+.cta-actions {
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+  justify-items: start;
+}
+
+.cta-stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.store-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1rem 0.55rem 0.8rem;
+  border-radius: 14px;
+  background: rgba(26, 26, 26, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(26, 26, 26, 0.15);
+}
+
+.store-badge small {
+  display: block;
+  font-size: 0.68rem;
+  line-height: 1.1;
+  color: rgba(26, 26, 26, 0.7);
+}
+
+.store-badge b {
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 960px) {
+  .cta-card {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
